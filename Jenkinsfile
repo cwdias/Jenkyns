@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "master01:9443/nginx:v2"
+    registry = "nginx:latest"
     dockerImage = ""
   }
 
@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
