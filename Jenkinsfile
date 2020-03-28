@@ -3,8 +3,7 @@ pipeline {
   environment {
      registry = "master01:9443/nginx:latest"
      dockerImage = ""
-     JOB_NAME = "${JOB_NAME}".replace("-deploy", "")
-     REGISTRY = "master01:9443"  
+     JOB_NAME = "${JOB_NAME}".replace("-deploy", "") 
   }
 
   agent any
