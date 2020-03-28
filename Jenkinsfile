@@ -42,7 +42,10 @@ pipeline {
     }
 
     stage('Dangling Images') {
-      sh 'docker image rm nginx:lates'
+      steps {
+         sh 'docker image rm nginx:lates'
+      }
+      
     }
   }
 }
