@@ -32,7 +32,6 @@ spec:
       containers:
       - name: nginx
         image: master01:9443/nginx:v1
-	imagePullPolicy: Always
         ports:
         - containerPort: 80
         volumeMounts:
