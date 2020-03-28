@@ -17,7 +17,7 @@ pipeline {
     stage ('Deploy') {
       steps{
         sshagent(credentials : ['ssh-agent-cred']) {
-             sh 'hostname'
+             sh 'ssh -o StrictHostKeyChecking=no -l root 192.168.1.101 uname -a'
         }
       }
     }
