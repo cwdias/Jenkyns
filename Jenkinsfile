@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
   	    sshagent (credentials: ['master01-ssh-cred']) {
-    		  sh 'ssh -o StrictHostKeyChecking=no -l cloudbees 192.168.1.101 hostname'
+    		  sh 'ssh -o StrictHostKeyChecking=no -l root 192.168.1.101 hostname'
   	    }
       }
     }
