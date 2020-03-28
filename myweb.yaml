@@ -31,7 +31,7 @@ spec:
             claimName: pv-claim-nginx
       containers:
       - name: nginx
-        image: master01:9443/nginx:v1
+        image: master01:9443/nginx:v2
         ports:
         - containerPort: 80
         volumeMounts:
