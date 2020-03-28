@@ -28,7 +28,7 @@ spec:
         role: rolling-update
     spec:
       containers:
-      - name: ${JOB_NAME}-container
+      - name: ${JOB_NAME}
         image: master01:9443/${JOB_NAME}:latest
         ports:
         - containerPort: 80
