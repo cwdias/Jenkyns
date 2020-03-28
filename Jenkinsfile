@@ -1,8 +1,8 @@
 pipeline {
 
   environment {
-    registry = "master01:9443/nginx:v2"
-    dockerImage = ""
+     registry = "master01:9443/nginx:v2"
+     dockerImage = ""
   }
 
   agent any
