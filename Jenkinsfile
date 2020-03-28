@@ -43,7 +43,7 @@ pipeline {
 
     stage('Dangling Images') {
       steps {
-         sh 'docker image rm nginx:lates'
+         sh 'docker image rm nginx:latest'
       }
       
     }
