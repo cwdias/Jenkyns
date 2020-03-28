@@ -26,7 +26,7 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "" ) {
+          docker.withRegistry('https://master01:9443', 'docker-regist-cred') {
             dockerImage.push()
           }
         }
