@@ -1,2 +1,2 @@
-FROM master01:9443/nginx:v2
+FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html
