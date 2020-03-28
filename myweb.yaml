@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: ${JOB_NAME}-container
-        image: ${REGISTRY}/${JOB_NAME}:latest
+        image: master01:9443/${JOB_NAME}:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
