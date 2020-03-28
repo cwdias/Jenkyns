@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "nginx:latest"
+    registry = "master01:9443/nginx:v2"
     dockerImage = ""
   }
 
