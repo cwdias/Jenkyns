@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.ibm.com/cwdias/NOI.git'
+        git 'https://github.com/cwdias/Jenkyns.git'
       }
     }
   }
