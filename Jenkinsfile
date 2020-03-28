@@ -1,8 +1,10 @@
 pipeline {
 
   environment {
-     registry = "master01:9443/nginx:v2"
+     registry = "master01:9443/nginx:latest"
      dockerImage = ""
+     JOB_NAME = "${JOB_NAME}".replace("-deploy", "")
+     REGISTRY = "master01:9443"  
   }
 
   agent any
@@ -36,7 +38,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "mykubeconfig-cred")
+          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "mykubeconfig-cred", enableConfigSubstitution: true)
         }
       }
     }
