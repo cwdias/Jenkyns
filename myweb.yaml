@@ -27,17 +27,10 @@ spec:
         build_number: 2
         role: rolling-update
     spec:
-      volumes:
-        - name: pv-storage
-          persistentVolumeClaim:
-            claimName: pv-claim-nginx
       containers:
       - name: nginx
         image: master01:9443/nginx:latest
         ports:
         - containerPort: 80
-        volumeMounts:
-          - mountPath: "/usr/share/nginx/html"
-            name: pv-storage
       imagePullSecrets:
         - name: regcred
