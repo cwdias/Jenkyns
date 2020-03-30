@@ -49,7 +49,6 @@ pipeline {
     
     stage('Get Pods') {
       steps {
-         sh 'ssh -o StrictHostKeyChecking=no root@192.168.1.101 while [[ $(kubectl get pods -l app=nginx -o \'jsonpath={..status.conditions[?(@.type=="Ready")].status}\') != "True" ]]; do echo "waiting for pod" && sleep 1; done'
          sh 'ssh -o StrictHostKeyChecking=no root@192.168.1.101 kubectl get pods -o wide'
       }
     }
