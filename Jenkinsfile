@@ -45,7 +45,12 @@ pipeline {
       steps {
          sh 'docker image rm nginx:latest'
       }
-      
+    }
+    
+    stage('Get Pods') {
+      steps {
+         sh 'ssh -o StrictHostKeyChecking=no root@192.168.1.101 kubectl get pods -o wide'
+      }
     }
   }
 }
