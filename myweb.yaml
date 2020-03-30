@@ -24,7 +24,7 @@ spec:
     metadata:
       labels:
         app: nginx
-        build_number: 3
+        build_number: 1
         role: rolling-update
     spec:
       containers:
